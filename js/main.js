@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到『硫酸铝的起始站』&amp;<a href="https://github.com/imsyy/Snavigation" target="_blank">模板作者:Imsyy</a>'
+            message: '欢迎来到『硫酸铝的起始站』<br><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy</a>'
         });
     }, 800);
 
