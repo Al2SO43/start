@@ -92,3 +92,9 @@
         padding: 10px 0px !important;
     }
 }
+
+@media (max-width: 768px) {
+    .hidden-content {
+        display: none;
+    }
+}
