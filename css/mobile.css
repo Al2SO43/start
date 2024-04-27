@@ -95,6 +95,6 @@
 
 @media (max-width: 768px) {
     .hidden-content {
-        display: none;
+        display: none !important;
     }
 }
