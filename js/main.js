@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到『硫酸铝的起始页』'
+            message: '欢迎来到『硫酸铝的起始站』'
         });
     }, 800);
 
