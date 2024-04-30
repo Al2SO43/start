@@ -182,7 +182,7 @@ function setBgImgInit() {
             var rd = Math.floor(Math.random() * 10);
             $('#bg').attr('src', pictures[rd]) //随机默认壁纸
             break;
-        case "2":
+        case "6":
             var pictures = new Array();
             pictures[0] = './img/bendi/background1.webp';
             pictures[1] = './img/bendi/background2.webp';
@@ -197,16 +197,16 @@ function setBgImgInit() {
             var rd = Math.floor(Math.random() * 10);
             $('#bg').attr('src', pictures[rd]) //随机local壁纸
             break;
-        case "3":
+        case "2":
             $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php') //必应每日
             break;
-        case "4":
+        case "3":
             $('#bg').attr('src', 'https://api.aixiaowai.cn/gqapi/gqapi.php') //高清风景
             break;
-        case "5":
+        case "4":
             $('#bg').attr('src', 'https://api.aixiaowai.cn/api/api.php') //随机二次元
             break;
-        case "6":
+        case "5":
             $('#bg').attr('src', 'https://api.aixiaowai.cn/mcapi/mcapi.php') //MC
             break;
     }
