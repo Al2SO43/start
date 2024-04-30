@@ -1048,7 +1048,7 @@ $(document).ready(function () {
             });
         }
 
-        if (type === "2") {
+        if (type === "6") {
             $('#wallpaper_text').html("显示本地壁纸，刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
@@ -1056,7 +1056,7 @@ $(document).ready(function () {
             });
         }
 
-        if (type === "3") {
+        if (type === "2") {
             $('#wallpaper_text').html("显示必应每日，每天更新，刷新页面以生效 | API @ 缙哥哥");
             setBgImg(bg_img);
             iziToast.show({
@@ -1064,7 +1064,7 @@ $(document).ready(function () {
             });
         }
 
-        if (type === "4") {
+        if (type === "3") {
             $('#wallpaper_text').html("显示高清风景，每次刷新后更换，刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
@@ -1072,7 +1072,7 @@ $(document).ready(function () {
             });
         }
 
-        if (type === "5") {
+        if (type === "4") {
             $('#wallpaper_text').html("显示随机二次元，每次刷新后更换，刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
@@ -1080,7 +1080,7 @@ $(document).ready(function () {
             });
         }
 
-        if (type === "6") {
+        if (type === "5") {
             $('#wallpaper_text').html("显示MC酱动漫，每次刷新后更换，刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
