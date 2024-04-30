@@ -183,23 +183,41 @@ function setBgImgInit() {
             $('#bg').attr('src', pictures[rd]) //随机默认壁纸
             break;
         case "2":
-            $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php') //必应每日
+            var pictures = new Array();
+            pictures[0] = './img/bendi/background1.webp';
+            pictures[1] = './img/bendi/background2.webp';
+            pictures[2] = './img/bendi/background3.webp';
+            pictures[3] = './img/bendi/background4.webp';
+            pictures[4] = './img/bendi/background5.webp';
+            pictures[5] = './img/bendi/background6.webp';
+            pictures[6] = './img/bendi/background7.webp';
+            pictures[7] = './img/bendi/background8.webp';
+            pictures[8] = './img/bendi/background9.webp';
+            pictures[9] = './img/bendi/background10.webp';
+            var rd = Math.floor(Math.random() * 10);
+            $('#bg').attr('src', pictures[rd]) //随机local壁纸
             break;
         case "3":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/gqapi/gqapi.php') //高清风景
+            $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php') //必应每日
             break;
         case "4":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/api/api.php') //随机二次元
+            $('#bg').attr('src', 'https://api.aixiaowai.cn/gqapi/gqapi.php') //高清风景
             break;
         case "5":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/mcapi/mcapi.php') //MC
+            $('#bg').attr('src', 'https://api.aixiaowai.cn/api/api.php') //随机二次元
             break;
         case "6":
+            $('#bg').attr('src', 'https://api.aixiaowai.cn/mcapi/mcapi.php') //MC
+            break;
+    }
+}
+/*
+        case "7":
             $('#bg').attr('src', bg_img["path"]) //自定义
             break;
     }
 }
-
+*/
 // 搜索框高亮
 function focusWd() {
     $("body").addClass("onsearch");
@@ -1023,7 +1041,7 @@ $(document).ready(function () {
         bg_img["type"] = type;
 
         if (type === "1") {
-            $('#wallpaper_text').html("显示本地壁纸，刷新页面以生效");
+            $('#wallpaper_text').html("显示默认壁纸，刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
@@ -1031,7 +1049,7 @@ $(document).ready(function () {
         }
 
         if (type === "2") {
-            $('#wallpaper_text').html("显示必应每日，每天更新，刷新页面以生效 | API @ 缙哥哥");
+            $('#wallpaper_text').html("显示本地壁纸，刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
@@ -1039,7 +1057,7 @@ $(document).ready(function () {
         }
 
         if (type === "3") {
-            $('#wallpaper_text').html("显示高清风景，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示必应每日，每天更新，刷新页面以生效 | API @ 缙哥哥");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
@@ -1047,7 +1065,7 @@ $(document).ready(function () {
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示随机二次元，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示高清风景，每次刷新后更换，刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
@@ -1055,7 +1073,7 @@ $(document).ready(function () {
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示MC酱动漫，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示随机二次元，每次刷新后更换，刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
@@ -1063,6 +1081,14 @@ $(document).ready(function () {
         }
 
         if (type === "6") {
+            $('#wallpaper_text').html("显示MC酱动漫，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            setBgImg(bg_img);
+            iziToast.show({
+                message: '壁纸设置成功，刷新生效',
+            });
+        }
+
+        if (type === "7") {
             $('#wallpaper_text').html("自定义壁纸地址，请输入正确地址，点击保存且刷新页面以生效");
             $("#wallpaper_url").fadeIn(100);
             $("#wallpaper-button").fadeIn(100);
