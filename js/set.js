@@ -1049,7 +1049,7 @@ $(document).ready(function () {
         }
 
         if (type === "6") {
-            $('#wallpaper_text').html("显示本地壁纸，刷新页面以生效");
+            $('#wallpaper_text').html("显示本地图片，刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功，刷新生效',
