@@ -897,7 +897,7 @@ $(document).ready(function () {
         if (quick_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '快捷方式 " + key + " 已有数据，是否覆盖？',
+                message: '快捷方式 ' + key + ' 已有数据，是否覆盖？',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         quick_list[key] = {
