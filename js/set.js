@@ -667,7 +667,7 @@ $(document).ready(function () {
         });
         iziToast.show({
             timeout: 8000,
-            message: '是否设置为默认搜索引擎？',
+            message: '是否设置为默认搜索引擎?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setSeInit();
@@ -722,7 +722,7 @@ $(document).ready(function () {
         if (se_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 已有数据，是否覆盖？',
+                message: '搜索引擎 ' + key + ' 已有数据,是否覆盖?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         se_list[key] = {
@@ -811,7 +811,7 @@ $(document).ready(function () {
         } else {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 是否删除？',
+                message: '搜索引擎 ' + key + ' 是否删除?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         var se_list = getSeList();
@@ -897,7 +897,7 @@ $(document).ready(function () {
         if (quick_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '快捷方式 ' + key + ' 已有数据，是否覆盖？',
+                message: '快捷方式 ' + key + ' 已有数据,是否覆盖?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         quick_list[key] = {
@@ -1010,7 +1010,7 @@ $(document).ready(function () {
 
         iziToast.show({
             timeout: 8000,
-            message: '快捷方式 ' + key + ' 是否删除？',
+            message: '快捷方式 ' + key + ' 是否删除?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     var quick_list = getQuickList();
@@ -1041,55 +1041,55 @@ $(document).ready(function () {
         bg_img["type"] = type;
 
         if (type === "1") {
-            $('#wallpaper_text').html("显示默认壁纸，刷新页面以生效");
+            $('#wallpaper_text').html("显示默认壁纸,刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "6") {
-            $('#wallpaper_text').html("显示本地图片，刷新页面以生效");
+            $('#wallpaper_text').html("显示本地图片,刷新页面以生效");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "2") {
-            $('#wallpaper_text').html("显示必应每日，每天更新，刷新页面以生效 | API @ 缙哥哥");
+            $('#wallpaper_text').html("显示必应每日,每天更新,刷新页面以生效 | API @ 缙哥哥");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "3") {
-            $('#wallpaper_text').html("显示高清风景，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示高清风景,每次刷新后更换,刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示随机二次元，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示随机二次元,每次刷新后更换,刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示MC酱动漫，每次刷新后更换，刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后更换,刷新页面以生效 | API @ 小歪");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功，刷新生效',
+                message: '壁纸设置成功,刷新生效',
             });
         }
 
         if (type === "7") {
-            $('#wallpaper_text').html("自定义壁纸地址，请输入正确地址，点击保存且刷新页面以生效");
+            $('#wallpaper_text').html("自定义壁纸地址,请输入正确地址,点击保存且刷新页面以生效");
             $("#wallpaper_url").fadeIn(100);
             $("#wallpaper-button").fadeIn(100);
             $("#wallpaper-url").val(bg_img["path"]);
@@ -1113,7 +1113,7 @@ $(document).ready(function () {
             bg_img["path"] = url;
             setBgImg(bg_img);
             iziToast.show({
-                message: '自定义壁纸设置成功，刷新生效',
+                message: '自定义壁纸设置成功,刷新生效',
             });
         }
     });
@@ -1168,7 +1168,7 @@ $(document).ready(function () {
 
             iziToast.show({
                 timeout: 8000,
-                message: '当前数据将会被覆盖！是否继续导入？',
+                message: '当前数据将会被覆盖!是否继续导入?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         for (var key in mydata) {
