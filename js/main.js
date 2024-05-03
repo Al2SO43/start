@@ -90,9 +90,12 @@ function getAndSetWeather() {
         .then(response => response.json())
         .then(data => {
             // 更新页面上的天气信息
-            $('#wea_text').text(data.result.condition.day_weather_short); // 更新夜间天气状况
-            $('#tem1').text(data.result.condition.max_degree); // 更新最高气温
-            $('#tem2').text(data.result.condition.min_degree); // 更新最低气温
+            $('#wea_text').text(data.result.condition.day_weather_short+'    '); // 更新天气状况
+            $('#tem1').text(data.result.condition.max_degree+'°C丨'); // 更新最高气温
+            $('#tem2').text(data.result.condition.min_degree+'°C-'); // 更新最低气温
+            $('#win_text').text(data.result.condition.day_wind_direction); // 风向
+            $('#win_level').text(data.result.condition.day_wind_power+'级'); // 风力
+            $('#city').text(data.result.city.Province+'丨')    //城市
         })
         .catch(console.error);
 }
