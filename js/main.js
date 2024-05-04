@@ -104,7 +104,6 @@ function getAndSetWeather() {
         })
         .catch(console.error);
 }
-
 // 初始获取并设置天气信息
 getAndSetWeather();
 
