@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到『硫酸铝的起始站』!<br><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy!</a>'
+            message: '欢迎来到『硫酸铝的起始站』!<br><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy</a>!'
         });
     }, 800);
 
@@ -68,18 +68,23 @@ function time() {
     dt = new Date();
     var mm = dt.getMonth() + 1;
     var d = dt.getDate();
-    var weekday = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+    var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
     var day = dt.getDay();
     var h = dt.getHours();
     var m = dt.getMinutes();
+    var s = dt.getSeconds();
+    var y = dt.getFullYear();
     if (h < 10) {
         h = "0" + h;
     }
     if (m < 10) {
         m = "0" + m;
     }
-    $("#time_text").html(h + '<span id="point">:</span>' + m);
-    $("#day").html(mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
+    if (s < 10) {
+        s = "0" + s;
+    }
+    $("#time_text").html(h + '<span id="point">:</span>' + m+'<span id="point">:</span>'+s);
+    $("#day").html(y + "&nbsp;年&nbsp;" + mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
     t = setTimeout(time, 1000);
 }
 

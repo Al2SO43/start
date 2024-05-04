@@ -667,7 +667,7 @@ $(document).ready(function () {
         });
         iziToast.show({
             timeout: 8000,
-            message: '是否设置为默认搜索引擎?',
+            message: '是否将其设置为默认搜索引擎?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setSeInit();
@@ -675,7 +675,7 @@ $(document).ready(function () {
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
                     iziToast.show({
-                        message: '设置成功'
+                        message: '设置成功!'
                     });
                     setTimeout(function () {
                         window.location.reload()
@@ -712,7 +712,7 @@ $(document).ready(function () {
         if (!num.test(key)) {
             iziToast.show({
                 timeout: 2000,
-                message: '序号 ' + key + ' 不是正整数'
+                message: '序号 ' + key + ' 不是正整数!'
             });
             return;
         }
@@ -722,7 +722,7 @@ $(document).ready(function () {
         if (se_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 已有数据,是否覆盖?',
+                message: '搜索引擎' + key + '&nbsp;已有数据,是否覆盖此处数据?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         se_list[key] = {
@@ -741,7 +741,7 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '覆盖成功'
+                            message: '覆盖成功!'
                         });
                     }, true],
                     ['<button>取消</button>', function (instance, toast) {
@@ -768,7 +768,7 @@ $(document).ready(function () {
         setSeInit();
         iziToast.show({
             timeout: 2000,
-            message: '添加成功'
+            message: '添加成功!'
         });
         $(".se_add_content").hide();
         showSe();
@@ -806,12 +806,12 @@ $(document).ready(function () {
         var key = $(this).val();
         if (key == se_default) {
             iziToast.show({
-                message: '默认搜索引擎不可删除'
+                message: '默认搜索引擎不可以被删除!'
             });
         } else {
             iziToast.show({
                 timeout: 8000,
-                message: '搜索引擎 ' + key + ' 是否删除?',
+                message: '是否要删除&nbsp;搜索引擎' + key + '?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         var se_list = getSeList();
@@ -822,7 +822,7 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '删除成功'
+                            message: '删除成功!'
                         });
                     }, true],
                     ['<button>取消</button>', function (instance, toast) {
@@ -839,7 +839,7 @@ $(document).ready(function () {
     $(".set_se_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '现有搜索引擎数据将被清空',
+            message: '如果确认重置,那么现有的所有搜索引擎数据将被清空!<br>是否重置现有的搜索引擎数据?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setSeList(se_list_preinstall);
@@ -851,7 +851,7 @@ $(document).ready(function () {
                         transitionOut: 'flipOutX',
                     }, toast, 'buttonName');
                     iziToast.show({
-                        message: '重置成功'
+                        message: '重置成功!'
                     });
                     setTimeout(function () {
                         window.location.reload()
@@ -887,7 +887,7 @@ $(document).ready(function () {
         if (!num.test(key)) {
             iziToast.show({
                 timeout: 2000,
-                message: '快捷方式 ' + key + ' 不是正整数'
+                message: '序号 ' + key + ' 不是正整数!'
             });
             return;
         }
@@ -897,7 +897,7 @@ $(document).ready(function () {
         if (quick_list[key]) {
             iziToast.show({
                 timeout: 8000,
-                message: '快捷方式 ' + key + ' 已有数据,是否覆盖?',
+                message: '快捷方式' + key + '&nbsp;已有数据,是否覆盖此处数据?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         quick_list[key] = {
@@ -915,7 +915,7 @@ $(document).ready(function () {
                             transitionOut: 'flipOutX',
                         }, toast, 'buttonName');
                         iziToast.show({
-                            message: '覆盖成功'
+                            message: '覆盖成功!'
                         });
                     }, true],
                     ['<button>取消</button>', function (instance, toast) {
@@ -942,7 +942,7 @@ $(document).ready(function () {
         $(".quick_add_content").hide();
         iziToast.show({
             timeout: 2000,
-            message: '添加成功'
+            message: '添加成功!'
         });
 
         //显示列表
@@ -961,7 +961,7 @@ $(document).ready(function () {
     $(".set_quick_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '快捷方式数据将被清空',
+            message: '如果确认重置,那么现有的所有快捷方式数据将被清空!<br>是否重置现有的快捷方式数据?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setQuickList(quick_list_preinstall);
@@ -971,7 +971,7 @@ $(document).ready(function () {
                     }, toast, 'buttonName');
                     iziToast.show({
                         timeout: 2000,
-                        message: '重置成功'
+                        message: '重置成功!'
                     });
                     // setTimeout(function () {
                     //     window.location.reload()
@@ -1010,7 +1010,7 @@ $(document).ready(function () {
 
         iziToast.show({
             timeout: 8000,
-            message: '快捷方式 ' + key + ' 是否删除?',
+            message: '是否要删除&nbsp;快捷方式' + key + '?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     var quick_list = getQuickList();
@@ -1022,7 +1022,7 @@ $(document).ready(function () {
                     }, toast, 'buttonName');
                     iziToast.show({
                         timeout: 2000,
-                        message: '删除成功'
+                        message: '删除成功!'
                     });
                 }, true],
                 ['<button>取消</button>', function (instance, toast) {
@@ -1041,55 +1041,55 @@ $(document).ready(function () {
         bg_img["type"] = type;
 
         if (type === "1") {
-            $('#wallpaper_text').html("显示默认壁纸,刷新页面以生效");
+            $('#wallpaper_text').html("显示默认壁纸,每次刷新后随机选择,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "6") {
-            $('#wallpaper_text').html("显示本地图片,刷新页面以生效");
+            $('#wallpaper_text').html("显示本地图片,每次刷新后随机选择,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "2") {
-            $('#wallpaper_text').html("显示必应每日,每天更新,刷新页面以生效 | API @ 缙哥哥");
+            $('#wallpaper_text').html("显示必应每日,选择后每天自动更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "3") {
-            $('#wallpaper_text').html("显示高清风景,每次刷新后更换,刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示高清风景,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示随机二次元,每次刷新后更换,刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示随机二次元,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后更换,刷新页面以生效 | API @ 小歪");
+            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
-                message: '壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
         if (type === "7") {
-            $('#wallpaper_text').html("自定义壁纸地址,请输入正确地址,点击保存且刷新页面以生效");
+            $('#wallpaper_text').html("自定义壁纸地址,请输入正确地址,点击保存且刷新页面以生效!");
             $("#wallpaper_url").fadeIn(100);
             $("#wallpaper-button").fadeIn(100);
             $("#wallpaper-url").val(bg_img["path"]);
@@ -1105,7 +1105,7 @@ $(document).ready(function () {
         var reg = /^http(s)?:\/\/(([\w-]+\.)+[\w-]|localhost)+(:[0-9]{1,5})?(\/[\w- ./?%&=]*)?$/g;
         if (!reg.test(url)) {
             iziToast.show({
-                message: '请输入正确的链接',
+                message: '请输入正确的链接!',
             });
         } else {
             var bg_img = getBgImg();
@@ -1113,7 +1113,7 @@ $(document).ready(function () {
             bg_img["path"] = url;
             setBgImg(bg_img);
             iziToast.show({
-                message: '自定义壁纸设置成功,刷新生效',
+                message: '壁纸设置成功,刷新网页后生效!',
             });
         }
     });
@@ -1125,7 +1125,7 @@ $(document).ready(function () {
         download("Al2SO43_Start_Data_" + $.now() + ".json", json);
         iziToast.show({
             timeout: 2000,
-            message: '已导出备份文件至下载目录'
+            message: '已成功导出备份文件至您的浏览器下载目录!'
         });
     });
 
@@ -1154,21 +1154,21 @@ $(document).ready(function () {
             } catch (e) {
                 iziToast.show({
                     timeout: 2000,
-                    message: '数据解析异常'
+                    message: '备份文件数据解析异常,请检查您的备份文件!'
                 });
                 return;
             }
             if (typeof mydata != 'object') {
                 iziToast.show({
                     timeout: 2000,
-                    message: '数据格式错误'
+                    message: '备份文件数据格式错误,请检查您的备份文件!'
                 });
                 return;
             }
 
             iziToast.show({
                 timeout: 8000,
-                message: '当前数据将会被覆盖!是否继续导入?',
+                message: '如果确认导入备份文件,那么现有的所有数据将被覆盖!<br>是否导入备份文件?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         for (var key in mydata) {
@@ -1181,7 +1181,7 @@ $(document).ready(function () {
                         }, toast, 'buttonName');
                         iziToast.show({
                             timeout: 2000,
-                            message: '导入成功'
+                            message: '导入成功!'
                         });
                         setTimeout(function () {
                             window.location.reload()
