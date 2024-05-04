@@ -8,6 +8,11 @@
     .set {
         margin-top: 180px;
     }
+
+    #content {
+        height: 95%; /* 修改为您想要的高度，比如80% */
+    }
+    
 }
 
 /*小于720px时*/
@@ -20,6 +25,11 @@
         min-width: 23%;
         max-width: 23%;
     }
+
+    #content {
+        height: 95%; /* 修改为您想要的高度，比如80% */
+    }
+    
 }
 
 /*小于512px时*/
@@ -80,6 +90,11 @@
     .mobile {
         display: none;
     }
+
+    #content {
+        height: 95%; /* 修改为您想要的高度，比如80% */
+    }
+    
 }
 
 /* 大于568px时 */
@@ -91,10 +106,20 @@
     .iziToast-wrapper {
         padding: 10px 0px !important;
     }
+
+    #content {
+        height: 95%; /* 修改为您想要的高度，比如80% */
+    }
+    
 }
 
 @media (max-width: 768px) {
     .hidden-content {
         display: none !important;
     }
+
+    #content {
+        height: 95%; /* 修改为您想要的高度，比如80% */
+    }
+    
 }
