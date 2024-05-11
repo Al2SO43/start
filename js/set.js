@@ -397,6 +397,7 @@ function download(filename, text) {
 // 打开设置
 function openSet() {
     $("#menu").addClass('on');
+    $(".hitokoto").hide();
 
     openBox();
 
@@ -433,6 +434,7 @@ function closeSet() {
 
 // 书签显示
 function openBox() {
+    $(".hitokoto").hide();
     $("#content").addClass('box');
     $(".mark").css({
         "display": "flex",
@@ -451,6 +453,7 @@ function openBox() {
 
 // 书签关闭
 function closeBox() {
+    $(".hitokoto").fadeIn(100);
     $("#content").removeClass('box');
     $(".mark").css({
         "display": "none",
@@ -469,24 +472,28 @@ function closeBox() {
 
 //显示设置搜索引擎列表
 function showSe() {
+    $(".hitokoto").hide();
     $(".se_list").show();
     $(".se_add_preinstall").show();
 }
 
 //隐藏设置搜索引擎列表
 function hideSe() {
+    $(".hitokoto").show();
     $(".se_list").hide();
     $(".se_add_preinstall").hide();
 }
 
 //显示设置快捷方式列表
 function showQuick() {
+    $(".hitokoto").hide();
     $(".quick_list").show();
     $(".se_add_preinstalls").show();
 }
 
 //隐藏设置快捷方式列表
 function hideQuick() {
+    $(".hitokoto").show();
     $(".quick_list").hide();
     $(".se_add_preinstalls").hide();
 }
@@ -508,6 +515,7 @@ $(document).ready(function () {
     // 点击事件
     $(document).on('click', function (e) {
         // 选择搜索引擎点击
+        $(".hitokoto").hide();
         if ($(".search-engine").is(":hidden") && $(".se").is(e.target) || $(".search-engine").is(":hidden") && $("#icon-se").is(e.target)) {
             if ($(".se").is(e.target) || $("#icon-se").is(e.target)) {
                 //获取宽度
@@ -520,7 +528,6 @@ $(document).ready(function () {
                 $(".search-engine").slideUp(160);
             }
         }
-
         // 自动提示隐藏
         if (!$(".sou").is(e.target) && $(".sou").has(e.target).length === 0) {
             $("#keywords").hide();
@@ -576,6 +583,7 @@ $(document).ready(function () {
     $(document).on('click', '.close_sou', function () {
         blurWd();
         closeSet();
+        $(".hitokoto").fadein(100);
     });
 
     // 点击搜索引擎时隐藏自动提示
