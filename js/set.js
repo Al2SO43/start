@@ -25,14 +25,14 @@ var se_list_preinstall = {
     },
     '2': {
         id: 2,
-        title: "必应",
+        title: "Bing",
         url: "https://cn.bing.com/search",
         name: "q",
         icon: "iconfont icon-bing",
     },
     '3': {
         id: 3,
-        title: "谷歌",
+        title: "Google",
         url: "https://www.google.com/search",
         name: "q",
         icon: "iconfont icon-google",
@@ -81,18 +81,18 @@ var se_list_preinstall = {
     },
     '10': {
         id: 10,
-        title: "淘宝",
-        url: "https://s.taobao.com/search",
-        name: "q",
-        icon: "iconfont icon-taobao",
+        title: "京东",
+        url: "https://search.jd.com/Search",
+        name: "keyword",
+        icon: "iconfont icon-jingdong",
     },
 };
 
 // 默认快捷方式
-var quick_list_preinstall = {
+var quick_list_preinstall = { 
     '1': {
         title: "Bing搜索",
-        url: "https://cn.bing.com/?mkt=zh-CN",
+        url: "https://www.bing.com/search?q=",
     },
 };
 
@@ -201,13 +201,13 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php') //必应每日
             break;
         case "3":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/gqapi/gqapi.php') //高清风景
+            $('#bg').attr('src', 'https://bing.img.run/rand.php') //高清风景
             break;
         case "4":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/api/api.php') //随机二次元
+            $('#bg').attr('src', 'https://t.mwm.moe/ai/') //AI二次元
             break;
         case "5":
-            $('#bg').attr('src', 'https://api.aixiaowai.cn/mcapi/mcapi.php') //MC
+            $('#bg').attr('src', 'https://www.dmoe.cc/random.php') //随机动漫
             break;
     }
 }
@@ -490,7 +490,6 @@ function hideQuick() {
     $(".quick_list").hide();
     $(".se_add_preinstalls").hide();
 }
-
 
 $(document).ready(function () {
 
@@ -1073,7 +1072,7 @@ $(document).ready(function () {
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示随机二次元,每次刷新后随机更换,刷新网页后生效!");
+            $('#wallpaper_text').html("显示AI二次元,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
@@ -1081,7 +1080,7 @@ $(document).ready(function () {
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后随机更换,刷新网页后生效!");
+            $('#wallpaper_text').html("显示随机动漫,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
@@ -1100,7 +1099,7 @@ $(document).ready(function () {
     });
 
     // 自定义壁纸设置保存
-    $(".wallpaper_save").click(function () {
+    /*$(".wallpaper_save").click(function () {
         var url = $("#wallpaper-url").val();
         var reg = /^http(s)?:\/\/(([\w-]+\.)+[\w-]|localhost)+(:[0-9]{1,5})?(\/[\w- ./?%&=]*)?$/g;
         if (!reg.test(url)) {
@@ -1116,7 +1115,7 @@ $(document).ready(function () {
                 message: '壁纸设置成功,刷新网页后生效!',
             });
         }
-    });
+    });*/
 
     // 我的数据导出
     $("#my_data_out").click(function () {
