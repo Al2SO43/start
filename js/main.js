@@ -184,7 +184,7 @@ Github:  https://github.com/imsyy/Snavigation
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
 
-fetch('https://v1.hitokoto.cn?max_length=12')
+fetch('https://v1.hitokoto.cn?max_length=16')
     .then(response => response.json())
     .then(data => {
         $('#hitokoto_text').html(data.hitokoto)
