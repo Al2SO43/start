@@ -235,6 +235,13 @@ img.error {
     text-shadow: var(--main-text-shadow);
 }
 
+.hitokoto_text {
+    color: #efefef;
+    opacity: 1.5;
+    font-size: 0.76rem;
+    text-shadow: var(--main-text-shadow);
+}
+
 /*搜索框*/
 .search,
 .wd,
