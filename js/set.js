@@ -89,13 +89,12 @@ var se_list_preinstall = {
 };
 
 // 默认快捷方式
-var quick_list_preinstall = { 
+var quick_list_preinstall = {
     '1': {
         title: "Bing搜索",
         url: "https://www.bing.com/search?q=",
     },
 };
-
 // 获取搜索引擎列表
 function getSeList() {
     var se_list_local = Cookies.get('se_list');
@@ -204,10 +203,10 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://bing.img.run/rand.php') //高清风景
             break;
         case "4":
-            $('#bg').attr('src', 'https://t.mwm.moe/ai/') //AI二次元
+            $('#bg').attr('src', 'https://www.dmoe.cc/random.php') //萌图
             break;
         case "5":
-            $('#bg').attr('src', 'https://www.dmoe.cc/random.php') //随机动漫
+            $('#bg').attr('src', 'https://t.mwm.moe/lai') //MC
             break;
     }
 }
@@ -353,6 +352,17 @@ function quickData() {
                 </div>`;
     }
     $(".quick-all").html(html + `<div class="quick"><a id="set-quick"><i class="iconfont icon-tianjia-"></i></a></div>`);
+    $("#set-quick").click(function () {
+        openSet();
+
+        // 设置内容加载
+        setSeInit(); //搜索引擎设置
+        setQuickInit(); //快捷方式设置
+
+        //添加快捷方式
+        $("#set-quick-menu").trigger('click');
+        $(".set_quick_list_add").trigger('click');
+    });
 }
 
 // 设置-快捷方式加载
@@ -1056,7 +1066,7 @@ $(document).ready(function () {
         }
 
         if (type === "6") {
-            $('#wallpaper_text').html("显示本地图片,每次刷新后随机选择,刷新网页后生效!");
+            $('#wallpaper_text').html("显示本地背景,每次刷新后随机选择,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
@@ -1080,7 +1090,7 @@ $(document).ready(function () {
         }
 
         if (type === "4") {
-            $('#wallpaper_text').html("显示AI二次元,每次刷新后随机更换,刷新网页后生效!");
+            $('#wallpaper_text').html("显示随机萌图,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
@@ -1088,14 +1098,14 @@ $(document).ready(function () {
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示随机动漫,每次刷新后随机更换,刷新网页后生效!");
+            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
             });
         }
 
-        if (type === "7") {
+        /*if (type === "7") {
             $('#wallpaper_text').html("自定义壁纸地址,请输入正确地址,点击保存且刷新页面以生效!");
             $("#wallpaper_url").fadeIn(100);
             $("#wallpaper-button").fadeIn(100);
@@ -1103,7 +1113,7 @@ $(document).ready(function () {
         } else {
             $("#wallpaper_url").fadeOut(300);
             $("#wallpaper-button").fadeOut(300);
-        }
+        }*/
     });
 
     // 自定义壁纸设置保存
