@@ -19,12 +19,19 @@ window.addEventListener('load', function () {
         transitionIn: 'bounceInDown',
         transitionOut: 'flipOutX',
         displayMode: 'replace',
-        layout: '1'
+        layout: '1',
     });
+    var toastTitleStyle = document.createElement("style");
+        toastTitleStyle.appendChild(document.createTextNode(
+        ".iziToast-title {" +
+        "   transform: translateY(50%) !important;" +
+        "   font-size: 1rem !important;" +
+        "}"));
+    document.head.appendChild(toastTitleStyle);
     setTimeout(function () {
         iziToast.show({
             title: hello,
-            message: '欢迎来到『硫酸铝的起始站』!<br><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy</a>!'
+            message: '欢迎来到『硫酸铝的起始站』!<br><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy</a>!',
         });
     }, 800);
 
