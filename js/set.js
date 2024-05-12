@@ -157,7 +157,7 @@ function setBgImg(bg_img) {
 function setBgImgInit() {
     var bg_img = getBgImg();
     $("input[name='wallpaper-type'][value=" + bg_img["type"] + "]").click();
-    if (bg_img["type"] === "5") {
+    if (bg_img["type"] === "8") {
         $("#wallpaper-url").val(bg_img["path"]);
         $("#wallpaper-button").fadeIn(100);
         $("#wallpaper_url").fadeIn(100);
