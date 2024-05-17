@@ -196,5 +196,6 @@ fetch('https://v1.hitokoto.cn?max_length=16')
     .then(data => {
         $('#hitokoto_text').html(data.hitokoto)
         $('#from_text').html(data.from)
+        $(".hitokoto").FadeIn();
     })
     .catch(console.error)

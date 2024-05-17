@@ -552,6 +552,7 @@ $(document).ready(function () {
             blurWd();
         } else {
             openBox();
+            $(".hitokoto").hide();
         }
     });
 
