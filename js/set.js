@@ -1098,7 +1098,7 @@ $(document).ready(function () {
         }
 
         if (type === "5") {
-            $('#wallpaper_text').html("显示MC酱动漫,每次刷新后随机更换,刷新网页后生效!");
+            $('#wallpaper_text').html("显示七濑胡桃,每次刷新后随机更换,刷新网页后生效!");
             setBgImg(bg_img);
             iziToast.show({
                 message: '壁纸设置成功,刷新网页后生效!',
