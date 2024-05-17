@@ -234,13 +234,19 @@ img.error {
     text-shadow: var(--main-text-shadow);
 }
 
+.hitokoto {
+    text-align: center
+}
 .hitokoto_text {
     color: #efefef;
     opacity: 1.5;
     font-size: 0.76rem;
     text-shadow: var(--main-text-shadow);
+    text-align: center;
 }
-
+.hitokoto_from {
+    text-align: center;
+}
 /*搜索框*/
 .search,
 .wd,
