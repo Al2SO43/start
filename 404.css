@@ -1,3 +1,4 @@
+@charset "utf-8";
 body {
     background-image: url('404.png');
     background-size: cover; /* 可选：根据需要调整 */
