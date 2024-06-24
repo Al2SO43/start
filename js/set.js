@@ -183,16 +183,16 @@ function setBgImgInit() {
             break;
         case "6":
             var pictures = new Array();
-            pictures[0] = './img/bendi/background1.webp';
-            pictures[1] = './img/bendi/background2.webp';
-            pictures[2] = './img/bendi/background3.webp';
-            pictures[3] = './img/bendi/background4.webp';
-            pictures[4] = './img/bendi/background5.webp';
-            pictures[5] = './img/bendi/background6.webp';
-            pictures[6] = './img/bendi/background7.webp';
-            pictures[7] = './img/bendi/background8.webp';
-            pictures[8] = './img/bendi/background9.webp';
-            pictures[9] = './img/bendi/background10.webp';
+            pictures[0] = './img/local/background1.webp';
+            pictures[1] = './img/local/background2.webp';
+            pictures[2] = './img/local/background3.webp';
+            pictures[3] = './img/local/background4.webp';
+            pictures[4] = './img/local/background5.webp';
+            pictures[5] = './img/local/background6.webp';
+            pictures[6] = './img/local/background7.webp';
+            pictures[7] = './img/local/background8.webp';
+            pictures[8] = './img/local/background9.webp';
+            pictures[9] = './img/local/background10.webp';
             var rd = Math.floor(Math.random() * 10);
             $('#bg').attr('src', pictures[rd]) //随机local壁纸
             break;
