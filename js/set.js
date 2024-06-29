@@ -857,7 +857,7 @@ $(document).ready(function () {
     $(".set_se_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '如果确认重置,那么现有的所有搜索引擎数据将被清空!<br>是否重置现有的搜索引擎数据?',
+            message: '如果确认重置,那么现有的所有搜索引擎数据将被清空!<br />是否重置现有的搜索引擎数据?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setSeList(se_list_preinstall);
@@ -979,7 +979,7 @@ $(document).ready(function () {
     $(".set_quick_list_preinstall").click(function () {
         iziToast.show({
             timeout: 8000,
-            message: '如果确认重置,那么现有的所有快捷方式数据将被清空!<br>是否重置现有的快捷方式数据?',
+            message: '如果确认重置,那么现有的所有快捷方式数据将被清空!<br />是否重置现有的快捷方式数据?',
             buttons: [
                 ['<button>确认</button>', function (instance, toast) {
                     setQuickList(quick_list_preinstall);
@@ -1186,7 +1186,7 @@ $(document).ready(function () {
 
             iziToast.show({
                 timeout: 8000,
-                message: '如果确认导入备份文件,那么现有的所有数据将被覆盖!<br>是否导入备份文件?',
+                message: '如果确认导入备份文件,那么现有的所有数据将被覆盖!<br />是否导入备份文件?',
                 buttons: [
                     ['<button>确认</button>', function (instance, toast) {
                         for (var key in mydata) {
