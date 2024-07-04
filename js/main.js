@@ -173,21 +173,9 @@ color: rgb(244,167,89);
 var styleContent = `
 color: rgb(30,152,255);
 `
-var title1 = 'Snavigation'
-var title2 = `
- _____ __  __  _______     ____     __
-|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
-  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
-  | | | |\\/| |\\___ \\  \\   /    \\   /  
- _| |_| |  | |____) |  | |      | |   
-|_____|_|  |_|_____/   |_|      |_|                                                     
-`
-var content = `
-版 本 号：1.1
-更新日期：2022-07-12
-
-Github:  https://github.com/imsyy/Snavigation
-`
+var title1 = '『硫酸铝的个人网站』'
+var title2 = ` Powered by Al2(SO4)3`
+var content = `Hello World!`
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
 
@@ -196,6 +184,6 @@ fetch('https://v1.hitokoto.cn?max_length=16')
     .then(data => {
         $('#hitokoto_text').html(data.hitokoto)
         $('#from_text').html(data.from)
-        $(".hitokoto").FadeIn();
+        $(".hitokoto").fadeIn();
     })
     .catch(console.error)

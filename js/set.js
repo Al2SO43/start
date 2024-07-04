@@ -594,7 +594,7 @@ $(document).ready(function () {
     $(document).on('click', '.close_sou', function () {
         blurWd();
         closeSet();
-        $(".hitokoto").fadein(100);
+        $(".hitokoto").fadeIn(100);
     });
 
     // 点击搜索引擎时隐藏自动提示
@@ -1105,36 +1105,7 @@ $(document).ready(function () {
                 message: '壁纸设置成功,刷新网页后生效!',
             });
         }
-
-        /*if (type === "7") {
-            $('#wallpaper_text').html("自定义壁纸地址,请输入正确地址,点击保存且刷新页面以生效!");
-            $("#wallpaper_url").fadeIn(100);
-            $("#wallpaper-button").fadeIn(100);
-            $("#wallpaper-url").val(bg_img["path"]);
-        } else {
-            $("#wallpaper_url").fadeOut(300);
-            $("#wallpaper-button").fadeOut(300);
-        }*/
     });
-
-    // 自定义壁纸设置保存
-    /*$(".wallpaper_save").click(function () {
-        var url = $("#wallpaper-url").val();
-        var reg = /^http(s)?:\/\/(([\w-]+\.)+[\w-]|localhost)+(:[0-9]{1,5})?(\/[\w- ./?%&=]*)?$/g;
-        if (!reg.test(url)) {
-            iziToast.show({
-                message: '请输入正确的链接!',
-            });
-        } else {
-            var bg_img = getBgImg();
-            bg_img["type"] = "5";
-            bg_img["path"] = url;
-            setBgImg(bg_img);
-            iziToast.show({
-                message: '壁纸设置成功,刷新网页后生效!',
-            });
-        }
-    });*/
 
     // 我的数据导出
     $("#my_data_out").click(function () {
