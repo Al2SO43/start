@@ -91,8 +91,8 @@ var se_list_preinstall = {
 // 默认快捷方式
 var quick_list_preinstall = {
     '1': {
-        title: "Bing搜索",
-        url: "https://www.bing.com/search?q=",
+        title: "QQ邮箱",
+        url: "https://mail.qq.com/",
     },
 };
 // 获取搜索引擎列表
