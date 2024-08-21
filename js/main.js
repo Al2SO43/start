@@ -30,8 +30,10 @@ window.addEventListener('load', function () {
     document.head.appendChild(toastTitleStyle);
     setTimeout(function () {
         iziToast.show({
+            timeout:2500,
+            icon: false,
             title: hello,
-            message: '欢迎来到『硫酸铝的起始站』!<br /><a href="https://github.com/imsyy/Snavigation" target="_blank">网页模板作者:Imsyy</a>!',
+            message: '欢迎来到『硫酸铝的起始站』!<br />网页模板作者:<a href="https://github.com/imsyy/Snavigation" target="_blank">Imsyy</a>!'
         });
     }, 800);
 
