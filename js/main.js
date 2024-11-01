@@ -100,16 +100,25 @@ function time() {
 //获取天气
 // 定义获取天气信息并更新页面的函数
 function getAndSetWeather() {
-    fetch('https://api.oioweb.cn/api/weather/GetWeather')
+    fetch('https://api.vvhan.com/api/weather')
         .then(response => response.json())
         .then(data => {
+            // 处理城市
+            let cityName = data.city.replace("市", "");
+            // 处理温度
+            let highTemp = parseInt(data.data.high); 
+            let lowTemp = parseInt(data.data.low);   
+            // 处理风力
+            let windLevel = data.data.fengli;
+            let windParts = windLevel.split('-');
+            let avgWindLevel = (parseInt(windParts[0]) + parseInt(windParts[1])) / 2;
             // 更新页面上的天气信息
-            $('#wea_text').text(data.result.condition.day_weather_short+'    '); // 更新天气状况
-            $('#tem1').text(data.result.condition.max_degree+'°C丨'); // 更新最高气温
-            $('#tem2').text(data.result.condition.min_degree+'°C-'); // 更新最低气温
-            $('#win_text').text(data.result.condition.day_wind_direction); // 风向
-            $('#win_level').text(data.result.condition.day_wind_power+'级'); // 风力
-            $('#city').text(data.result.city.Province+'丨')    //城市
+            $('#wea_text').text(data.data.type+'    '); // 更新天气状况
+            $('#tem1').text(highTemp+'°C丨'); // 更新最高气温
+            $('#tem2').text(lowTemp+'°C-'); // 更新最低气温
+            $('#win_text').text(data.data.fengxiang); // 风向
+            $('#win_level').text(avgWindLevel+'级'); // 风力
+            $('#city').text(cityName+'丨')    //城市
         })
         .catch(console.error);
 }
