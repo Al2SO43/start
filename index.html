@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>『硫酸铝的起始站』</title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- jQuery -->
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <link rel="stylesheet" type="text/css" href="./css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/animation.css" />
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css" />
+    <script type="text/javascript"
+        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js">
+    </script>
+    <!-- IE Out -->
+    <script>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
+            "https://al2so43.github.io/update/?referrer=https%3A%2F%2Fal2so43.github.io%2Fwebsite%2F&" + encodeURIComponent(window.location
+            .href);
+    </script>
+</head>
+
+<body>
+    <!--加载动画-->
+    <div id="loading-box">
+        <div class="loading-left-bg"></div>
+        <div class="loading-right-bg"></div>
+        <div class="spinner-box">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+            </div>
+            <div class="loading-word">
+                <p class="loading-title">『硫酸铝的起始站』</p>
+                <span id="loading-text">正在加载中......</span>
+            </div>
+        </div>
+    </div>
+    <!-- 背景图片 -->
+    <div class="bg-all">
+        <img id="bg" onerror="this.classList.add('error');"></img>
+        <div class="cover"></div>
+    </div>
+    <!-- 主体内容 -->
+    <section id="section" class="section">
+        <div id="content">
+            <div class="con">
+                <!-- 时间天气 -->
+                <div class="tool-all">
+                    <div class="time">
+                        <span id="time_text">00:<span id="point">00</span>:00</span>
+                        <span id="day">2000年&nbsp;1&nbsp;月&nbsp;1&nbsp;日&nbsp;星期一</span>
+                    </div>
+                    <div class="weather">
+                        <span id="city">实时&nbsp;</span><span id="wea_text">天气&nbsp;</span><span id="tem2">信息&nbsp;</span><span
+                            id="tem1"></span><span id="win_text">获取&nbsp;</span><span id="win_level">失败&nbsp;</span>
+                    </div>
+                </div>
+                <div class="hitokoto">
+                    <span id="hitokoto_text">这个每日名言似乎出了些小问题.</span><br />&nbsp;&nbsp;
+                    <span id="hitokoto-from">&nbsp;&nbsp;&nbsp;---「&nbsp;<span id="from_text">Al2(SO4)3-硫酸铝</span>&nbsp;」</span>
+                    <div class="hitokoto"><br /></div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="close_sou"></div>
+                <div class="sou">
+                    <form class="search" action="https://www.baidu.com/s" target="_Blank">
+                        <div class="all-search">
+                            <div class="se" title="点击切换搜索引擎">
+                                <i id="icon-se" class="iconfont icon-baidu"></i>
+                            </div>
+                            <input class="wd" type="text" name="wd" placeholder="输入搜索内容" autocomplete="off" />
+                            <div class="sou-button">
+                                <div class="s" id="s-button">
+                                    <i id="icon-sou" class="iconfont icon-sousuo"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" id="search-submit" style="display: none;" />
+                    </form>
+                    <div id="keywords" style="display: none;"></div>
+                    <div class="search-engine" style="display: none;">
+                        <div class="search-engine-list">
+                            <div class="se-li">
+                                <a class="se-li-text" data-url="https://www.baidu.com/s" data-name="wd"
+                                    data-icon="iconfont icon-baidu">
+                                    <i id="icon-sou-list" class="iconfont icon-sousuo"></i>
+                                    <span>百度</span>
+                                </a>
+                            </div>
+                            <div class="se-li" data-url="https://cn.bing.com/search" data-name="q"
+                                data-icon="iconfont icon-bing">
+                                <a class="se-li-text">
+                                    <i id="icon-sou-list" class="iconfont icon-bing"></i>
+                                    <span>Bing</span>
+                                </a>
+                            </div>
+                            <div class="se-li" data-url="https://www.google.com/search" data-name="q"
+                                data-icon="iconfont icon-google">
+                                <a class="se-li-text">
+                                    <i id="icon-sou-list" class="iconfont icon-google"></i>
+                                    <span>Google</span>
+                                </a>
+                            </div>
+                            <div class="se-li" data-url="https://www.sogou.com/web" data-name="query"
+                                data-icon="iconfont icon-bing">
+                                <a class="se-li-text">
+                                    <i id="icon-sou-list" class="iconfont icon-sougousousuo"></i>
+                                    <span>搜狗</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 书签页 -->
+                <div class="mark" style="display: none;">
+                    <div class="tab">
+                        <div class="tab-item active">默认</div>
+                        <div class="tab-item">推荐</div>
+                        <div class="tab-item">常用</div>
+                        <div class="tab-item">工具</div>
+                        <div class="tab-item">接口</div>
+                        <div class="tab-item">娱乐</div>
+                    </div>
+                    <div class="content products">
+                        <!-- 默认 -->
+                        <div class="mainCont selected">
+                            <div class="quick-all">
+                                <div class="quick">
+                                    <a href="https://mail.qq.com/" target="_blank">
+                                        QQ邮箱
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 推荐 -->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks" data-s="utools" title="Utools">
+                                    <a href="https://u.tools/" target="_blank">
+                                        Utools
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="7zip" title="7-Zip">
+                                    <a href="https://7-zip.org/" target="_blank">
+                                        7-Zip
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="vscode" title="VSCode">
+                                    <a href="https://code.visualstudio.com/" target="_blank">
+                                        VSCode
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="jetbrains" title="Jetbrains官网">
+                                    <a href="https://www.jetbrains.com/zh-cn/" target="_blank">
+                                        Jetbrains官网
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="vmware" title="VMWare虚拟机">
+                                    <a href="https://www.vmware.com/products/desktop-hypervisor.html" target="_blank">
+                                        VMWare虚拟机
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="feishu" title="飞书">
+                                    <a href="https://www.feishu.cn/" target="_blank">
+                                        飞书
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="qnstart" title="青柠起始页">
+                                    <a href="https://intro.limestart.cn/" target="_blank">
+                                        青柠起始页
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="tencentdocx" title="腾讯文档">
+                                    <a href="https://docs.qq.com/" target="_blank">
+                                        腾讯文档
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="WPS" title="WpsOffice">
+                                    <a href="https://www.wps.cn/" target="_blank">
+                                        WpsOffice
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="microsoftoutlook" title="MicrosoftOutlook">
+                                    <a href="https://www.microsoft.com/zh-cn/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook/" target="_blank">
+                                        MicrosoftOutlook
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 常用 -->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks" data-s="google" title="GoogleChrome">
+                                    <a href="https://www.google.cn/chrome/" target="_blank">
+                                        GoogleChrome
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="steamcommunity" title="Steamcommunity302">
+                                    <a href="https://www.dogfight360.com/blog/686/" target="_blank">
+                                        Steamcommunity302
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="steam" title="Steam">
+                                    <a href="https://store.steampowered.com/about/" target="_blank">
+                                        Steam
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="epic" title="Epic">
+                                    <a href="https://www.epicgames.com/site/zh-CN/home" target="_blank">
+                                        Epic
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="tuladingtools" title="图吧工具箱">
+                                    <a href="https://www.tbtool.cn/" target="_blank">
+                                        图吧工具箱
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="github" title="Github">
+                                    <a href="https://github.com/" target="_blank">
+                                        Github
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="wormhole" title="Wormhole">
+                                    <a href="https://wormhole.app/" target="_blank">
+                                        Wormhole
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="163mail" title="网易163邮箱">
+                                    <a href="https://mail.163.com/" target="_blank">
+                                        网易163邮箱
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="baidufanyi" title="百度翻译">
+                                    <a href="https://fanyi.baidu.com/" target="_blank">
+                                        百度翻译
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="aliyundrive" title="蓝奏云盘">
+                                    <a href="https://www.lanzoui.com/" target="_blank">
+                                        蓝奏云盘
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 工具 -->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks" data-s="uutool" title="UUTool">
+                                    <a href="https://uutool.cn/" target="_blank">
+                                        UUTool
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="zxgjdaquan" title="在线工具大全">
+                                    <a href="https://www.lddgo.net/" target="_blank">
+                                        在线工具大全
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="cainiaogj" title="菜鸟工具">
+                                    <a href="https://www.jyshare.com/" target="_blank">
+                                        菜鸟工具
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="toolhelper" title="Toolhelper">
+                                    <a href="https://www.toolhelper.cn/" target="_blank">
+                                        Toolhelper
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="matools" title="MaTools">
+                                    <a href="https://www.matools.com/" target="_blank">
+                                        MaTools
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="alltoall" title="AllToAll">
+                                    <a href="https://www.alltoall.net/" target="_blank">
+                                        AllToAll
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="zxwjzh" title="在线文件转换">
+                                    <a href="https://cdkm.com/cn/" target="_blank">
+                                        在线文件转换
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="aconvert" title="Aconvert格式转换">
+                                    <a href="https://www.aconvert.com/cn/" target="_blank">
+                                        Aconvert格式转换
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="omnifile" title="通用图像工具">
+                                    <a href="https://omnifile.co/zh-cn/" target="_blank">
+                                        通用图像工具
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="onlinepdfedit" title="OnlinePDF">
+                                    <a href="https://onlinepdfedit.com/zh-cn/" target="_blank">
+                                        OnlinePDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 接口 -->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks" data-s="mwm" title="栗次元API">
+                                    <a href="https://t.mwm.moe/" target="_blank">
+                                        栗次元API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="bingimg" title="Bing壁纸API">
+                                    <a href="https://bing.img.run/about.html" target="_blank">
+                                        Bing壁纸API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="yhpop" title="樱花API">
+                                    <a href="https://www.dmoe.cc/" target="_blank">
+                                        樱花API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="paugram" title="保罗API">
+                                    <a href="https://api.paugram.com/" target="_blank">
+                                        保罗API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="xiaowai" title="LoliAPI">
+                                    <a href="https://www.loliapi.com/" target="_blank">
+                                        LoliAPI
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="vvhan" title="韩小韩API">
+                                    <a href="https://api.vvhan.com/" target="_blank">
+                                        韩小韩API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="dujin" title="缙哥哥API">
+                                    <a href="https://www.dujin.org/tag/api" target="_blank">
+                                        缙哥哥API
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="roll" title="RollAPI">
+                                    <a href="https://www.mxnzp.com/doc/list" target="_blank">
+                                        RollAPI
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="injahow" title="InjahowAPI">
+                                    <a href="https://api.injahow.cn/" target="_blank">
+                                        InjahowAPI
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="hitokoto" title="一言API">
+                                    <a href="https://hitokoto.cn/" target="_blank">
+                                        一言API
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 娱乐 -->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks" data-s="bilibili" title="哔哩哔哩">
+                                    <a href="https://www.bilibili.com/" target="_blank">
+                                        哔哩哔哩
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="douyin" title="抖音">
+                                    <a href="https://www.douyin.com/" target="_blank">
+                                        抖音
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="kuaishou" title="快手">
+                                    <a href="https://www.kuaishou.com/new-reco" target="_blank">
+                                        快手
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="xigua" title="西瓜视频">
+                                    <a href="https://www.ixigua.com/?wid_try=1" target="_blank">
+                                        西瓜视频
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="iqiyi" title="爱奇艺">
+                                    <a href="https://www.iqiyi.com/" target="_blank">
+                                        爱奇艺
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="163music" title="网易云音乐">
+                                    <a href="https://music.163.com/" target="_blank">
+                                        网易云音乐
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="qqmusic" title="QQ音乐">
+                                    <a href="https://y.qq.com/" target="_blank">
+                                        QQ音乐
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="kugou" title="酷狗音乐">
+                                    <a href="https://www.kugou.com/" target="_blank">
+                                        酷狗音乐
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="kuwo" title="酷我音乐">
+                                    <a href="https://kuwo.cn/" target="_blank">
+                                        酷我音乐
+                                    </a>
+                                </div>
+                                <div class="quicks" data-s="migu" title="咪咕音乐">
+                                    <a href="https://www.migu.cn/music.html" target="_blank">
+                                        咪咕音乐
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 设置图标 -->
+                <div id="menu">
+                    <i id="icon-menu" class="iconfont icon-shezhi"></i>
+                </div>
+                <!-- 设置页 -->
+                <div class="set" style="display: none;">
+                    <div class="tabs">
+                        <div class="tab-items actives">搜索引擎</div>
+                        <div class="tab-items" id="set-quick-menu">快捷方式</div>
+                        <div class="tab-items">壁纸设置</div>
+                        <div class="tab-items">数据备份</div>
+                    </div>
+                    <div class="contents productss">
+                        <!-- 搜索引擎设置 -->
+                        <div class="mainConts selected">
+                            <div class="set_blocks">
+                                <div class="set_blocks_content">
+                                    <div class="se_list">
+                                        <div class="se_list_table">
+                                            <div class="se_list_div">
+                                                <div class="se_list_num">
+                                                    <i class="iconfont icon-home"></i>
+                                                </div>
+                                                <div class="se_list_name">百度</div>
+                                                <div class="se_list_button">
+                                                    <button class="set_se_default" value="baidu"
+                                                        style="border-radius: 8px 0px 0px 8px;">
+                                                        <span class="iconfont icon-home"></span>
+                                                    </button>
+                                                    <button class="edit_se" value="baidu">
+                                                        <span class="iconfont icon-xiugai"></span>
+                                                    </button>
+                                                    <button class="delete_se" value="baidu"
+                                                        style="border-radius: 0px 8px 8px 0px;">
+                                                        <span class="iconfont icon-delete"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="se_list_div">
+                                                <div class="se_list_num">2</div>
+                                                <div class="se_list_name">谷歌</div>
+                                                <div class="se_list_button">
+                                                    <button class="set_se_default" value="google"><span
+                                                            class="iconfont icon-home"></span></button>
+                                                    <button class="edit_se" value="google"><span
+                                                            class="iconfont icon-xiugai"></span></button>
+                                                    <button class="delete_se" value="google"><span
+                                                            class="iconfont icon-delete"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="se_add_preinstall">
+                                        <div class="set_se_list_add">
+                                            <span class="set_quick_text">新增</span>
+                                        </div>
+                                        <div class="set_se_list_preinstall">
+                                            <span class="set_quick_text">重置</span>
+                                        </div>
+                                    </div>
+                                    <div class="add_content se_add_content" style="display:none;">
+                                        <div class="froms">
+                                            <div class="from_items">
+                                                <div class="from_text">序号</div>
+                                                <input type="hidden" name="key_inhere" />
+                                                <input type="number" name="key" placeholder="请输入&nbsp;小于&nbsp;20&nbsp;的&nbsp;正整数"
+                                                    autocomplete="off"
+                                                    oninput="if(value>20)value=20;if(value<0)value=0" />
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">名称</div>
+                                                <input type="text" name="title" placeholder="请输入&nbsp;搜索引擎&nbsp;的&nbsp;名称" autocomplete="off" />
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">网址</div>
+                                                <input type="url" name="url" placeholder="请输入&nbsp;以&nbsp;https&nbsp;或&nbsp;http&nbsp;开头的&nbsp;URL链接"
+                                                    autocomplete="off" />
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">字段</div>
+                                                <input type="text" name="name" placeholder="请输入&nbsp;URL链接&nbsp;中&nbsp;?&nbsp;后面的字段"
+                                                    autocomplete="off" />
+                                            </div>
+                                            <div class="from_items" style="display: none;">
+                                                <input type="text" name="icon" placeholder="iconfont icon-Earth"
+                                                    value="iconfont icon-Earth" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="from_items button">
+                                            <div class="se_add_save">保存</div>
+                                            <div class="se_add_cancel">取消</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 快捷方式设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_blocks_content">
+                                    <div class="quick_list">
+                                        <div class="quick_list_table">
+                                            <div class="quick_list_div">
+                                                <div class="quick_list_div_num">1</div>
+                                                <div class="quick_list_div_name">哔哩哔哩</div>
+                                                <div class="quick_list_div_button">
+                                                    <div class="edit_quick" value="1">
+                                                        <span class="iconfont iconbook-edit"></span>
+                                                    </div>
+                                                    <div class="delete_quick" value="1">
+                                                        <span class="iconfont icondelete"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="quick_list_div">
+                                                <div class="quick_list_div_num">2</div>
+                                                <div class="quick_list_div_name">知乎</div>
+                                                <div class="quick_list_div_button">
+                                                    <button class="edit_quick" value="2"
+                                                        style="border-radius: 8px 0px 0px 8px;">
+                                                        <span class="iconfont iconbook-edit"></span>
+                                                    </button>
+                                                    <button class="delete_quick" value="2"
+                                                        style="border-radius: 0px 8px 8px 0px;">
+                                                        <span class="iconfont icondelete"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="se_add_preinstalls">
+                                        <div class="set_quick_list_add">
+                                            <span class="set_quick_text">新增</span>
+                                        </div>
+                                        <div class="set_quick_list_preinstall">
+                                            <span class="set_quick_text">重置</span>
+                                        </div>
+                                    </div>
+                                    <div class="add_content quick_add_content" style="display:none;">
+                                        <div class="froms">
+                                            <div class="from_items">
+                                                <div class="from_text">序号</div>
+                                                <input type="hidden" name="key_inhere" />
+                                                <input type="number" name="key" placeholder="请输入&nbsp;小于&nbsp;100&nbsp;的&nbsp;正整数"
+                                                    autocomplete="off"
+                                                    oninput="if(value>99)value=99;if(value<0)value=0" />
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">名称</div>
+                                                <input type="text" name="title" placeholder="请输入&nbsp;快捷方式&nbsp;的&nbsp;名称" autocomplete="off" />
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">网址</div>
+                                                <input type="url" name="url" placeholder="请输入&nbsp;以&nbsp;https&nbsp;或&nbsp;http&nbsp;开头的&nbsp;URL链接"
+                                                    autocomplete="off" />
+                                            </div>
+                                        </div>
+                                        <div class="from_items button">
+                                            <div class="quick_add_save">保存</div>
+                                            <div class="quick_add_cancel">取消</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 背景图片设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_tip">
+                                    <span class="set_text mobile">点击下方选项以切换壁纸,使用除默认壁纸以外的选项可能会导致网页载入缓慢.</span>
+                                    <span class="set_text mobile">不建议使用以主色调为白色的壁纸,会导致本站部分元素无法辨认.</span>
+                                    <span class="set_text" id="wallpaper_text">请点击选项以查看各项说明,高亮项为选中,选中后刷新网页以生效!</span>
+                                </div>
+                                <div class="set_blocks_content">
+                                    <div class="from_container">
+                                        <div class="froms">
+                                            <div class="from_row">
+                                                <div class="from_row_content">
+                                                    <div id="wallpaper">
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio1" class="set-wallpaper"
+                                                                name="wallpaper-type" value="1" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio1">
+                                                                默认壁纸
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio6" class="set-wallpaper"
+                                                                name="wallpaper-type" value="6" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio6">
+                                                                本地背景
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio2" class="set-wallpaper"
+                                                                name="wallpaper-type" value="2" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio2">
+                                                                必应每日
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio3" class="set-wallpaper"
+                                                                name="wallpaper-type" value="3" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio3">
+                                                                高清风景
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio4" class="set-wallpaper"
+                                                                name="wallpaper-type" value="4" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio4">
+                                                                随机萌图
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio5"
+                                                                class="set-wallpaper wallpaper-custom"
+                                                                name="wallpaper-type" value="5" style="display: none;" />
+                                                            <label class="form-radio-label" for="radio5">
+                                                                七濑胡桃
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="wallpaper_url" style="display: none;">
+                                                <div class="from_row">
+                                                    <!--<div class="from_items">
+                                                        <input type="text" name="wallpaper-url" id="wallpaper-url"
+                                                            placeholder="以 https 或 http 开头的 URL" autocomplete="off">
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="from_items button" id="wallpaper-button" style="display: none;">
+                                        <div class="wallpaper_save">保存</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 数据备份设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_tip">
+                                    <span class="set_text">点击导出按钮将会将您的数据备份并导出到您的设备.</span>
+                                    <span class="set_text">点击导入按钮可选择在您设备上的备份文件进行数据恢复.</span>
+                                    <span class="set_text">注:本功能尚未完善,若您遇到任何问题可以在设置里进行数据重置!</span>
+                                </div>
+                                <div class="set_button">
+                                    <div class="but-ordinary" id="my_data_in">导入</div>
+                                    <div class="but-ordinary" id="my_data_out">导出</div>
+                                    <input type="file" id="my_data_file" name="file" style="display: none" />
+                                </div>
+                                <div class="set_version">
+                                    <span class="set_version-text"><a href="https://github.com/imsyy/Snavigation" target="_blank">初始作者</a>丨<a href="https://github.com/al2so43/start" target="_blank">开源地址</a></span>
+                                    <span class="set_version-text2">Copyright&nbsp;©&nbsp;<a href="https://al2so43.github.io/start" class="set_version-text2">『硫酸铝的起始站』</a>&nbsp;V&nbsp;1.82</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 版权信息 -->
+        <div class="foot">
+            <!-- <a href="https://al2so43.github.io/website"><div class="power">Copyright&nbsp;&copy;&nbsp;2020
+                <script>
+                    document.write(' - ' + (new Date()).getFullYear())
+                </script>&nbsp;--><strong><span class="">Al2(SO4)3-硫酸铝丨<a href="https://al2so43.github.io/website">回到『硫酸铝的个人网站』</a></span></strong>
+                <!-- 以下信息请不要修改哦 -->
+                <!--&amp;&nbsp;&nbsp;模板初始作者&nbsp;:&nbsp;<a href="https://github.com/imsyy/Snavigation" target="_blank">Imsyy</a> -->
+            </div>
+        </div>
+    </section>
+    <!-- 主体内容结束 -->
+    <!-- noscript -->
+    <noscript>
+        <div class="noscript fixed-top">提示:您的浏览器未开启JavaScript.<br />本网站需要使用JavaScript,请您理解!</div>
+    </noscript>
+    <!-- JS -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/set.js"></script>
+    <script type="text/javascript" src="./js/js.cookie.js"></script>
+</body>
+
+</html>
